@@ -24,7 +24,7 @@ distribution-tools
 
 
 基于Redis Lua脚本实现可重入分布式锁
-
+使用案例：
 ```java
 @Autowired
 private RedisDsLockTemplate redisDsLockTemplate;
@@ -60,7 +60,7 @@ public String get(@PathVariable("name") String name) {
             });
             return null;
         }
-
+	//超时处理业务逻辑
         @Override
         public Object onTimeout() throws InterruptedException {
             log.info("current thread :{}, execute timeout....", Thread.currentThread().getName());
