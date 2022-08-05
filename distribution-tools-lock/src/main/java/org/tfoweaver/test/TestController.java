@@ -24,7 +24,7 @@ public class TestController {
     private static final Logger log = LoggerFactory.getLogger(TestController.class);
 
     @Autowired
-    RedisDsLockTemplate redisDsLockTemplate;
+    private RedisDsLockTemplate redisDsLockTemplate;
 
     @Autowired
     private TestDao testDao;
@@ -56,16 +56,6 @@ public class TestController {
                         return null;
                     }
                 });
-                Thread.sleep(1000);
-                Users user = testDao.getUserById(name);
-                if (Objects.isNull(user)) {
-                    Users users = new Users();
-                    users.setName(name);
-                    users.setAddress("nicaicai");
-                    users.setOrderId(11);
-                    testDao.insert(users);
-                    log.info("current thread :{}, execute getLock....", Thread.currentThread().getName());
-                }
                 return null;
             }
 
