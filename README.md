@@ -8,7 +8,7 @@
 
 distribution-tools
 
-|——distribution-tools-lock
+|——distribution-tools-lock 分布式锁组件
 
 ## 使用
 
