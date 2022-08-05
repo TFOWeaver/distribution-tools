@@ -43,7 +43,7 @@ public class StringUtils {
     /**
      * @Author Star_Chen
      * @Description 
-     * @Date 8:57 2022/8/5
+     * @Date 9:20 2022/8/5
      * @Param [array]
      * @return boolean
      **/

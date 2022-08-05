@@ -1,5 +1,9 @@
 package org.tfoweaver;
 
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * @Description:
  * @title: SpringBootTest
@@ -8,5 +12,10 @@ package org.tfoweaver;
  * @Version 1.0
  */
 @SpringBootApplication
+@MapperScan("org.tfoweaver")
 public class SpringBootTest {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootTest.class);
+    }
 }
